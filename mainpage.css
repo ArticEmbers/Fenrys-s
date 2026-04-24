@@ -1,0 +1,303 @@
+/* ============================================================
+   MAIN PAGE STYLES
+   ============================================================ */
+
+/* ── TAB BAR ── */
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.tab-btn {
+  padding: 9px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text2);
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.2px;
+}
+
+.tab-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  box-shadow: 0 0 10px rgba(122,92,255,0.2);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(122,92,255,0.4);
+}
+
+/* ── SECTION VISIBILITY ── */
+.tab-section {
+  display: none;
+  animation: fadeSlideIn 0.35s ease;
+}
+.tab-section.active { display: block; }
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--text), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── FRIEND CARDS ── */
+.friend-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.friend-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(122,92,255,0.3);
+}
+
+.friend-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.friend-status {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text3);
+}
+
+.friend-status.online { color: var(--success); }
+.friend-status.offline { color: var(--text3); }
+
+.placeholder-card { opacity: 0.4; border-style: dashed; }
+.placeholder-card .friend-avatar {
+  background: var(--surface2);
+  color: var(--text2);
+}
+
+/* ── GAME CARDS ── */
+.game-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+}
+
+.game-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface2);
+  border-radius: 14px;
+}
+
+.game-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.game-genre {
+  font-size: 0.82rem;
+  color: var(--accent2);
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.game-hours {
+  font-size: 0.78rem;
+  color: var(--text3);
+  font-family: var(--font-mono);
+}
+
+/* ── ABOUT LAYOUT ── */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.about-avatar {
+  font-size: 3rem;
+  width: 80px; height: 80px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgba(122,92,255,0.4);
+}
+
+.about-main h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.about-main p {
+  color: var(--text2);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.about-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+
+.tag {
+  padding: 6px 14px;
+  background: rgba(122,92,255,0.15);
+  border: 1px solid rgba(122,92,255,0.25);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-card { padding: 16px 20px; }
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ── EMPTY SECTION ── */
+.empty-section {
+  text-align: center;
+  padding: 80px 20px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius2);
+  color: var(--text3);
+}
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+.empty-section p {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+
+/* ── ACCESS PANEL ── */
+.access-panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.access-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(122,92,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.access-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.access-panel h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.access-panel p {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.access-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.access-input {
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 1.1rem;
+  max-width: 220px;
+}
+
+.access-link {
+  color: var(--success);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: var(--transition);
+}
+.access-link:hover {
+  text-shadow: 0 0 10px var(--success);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .about-layout { grid-template-columns: 1fr; }
+  .access-form { flex-direction: column; align-items: center; }
+  .access-input { max-width: 100%; }
+  .access-panel { padding: 36px 24px; }
+}

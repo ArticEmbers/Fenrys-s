@@ -1,0 +1,169 @@
+/* privatemainpage.css */
+
+/* ── PRIVATE TAG IN NAV ── */
+.private-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  background: rgba(255,92,122,0.15);
+  color: var(--danger);
+  border: 1px solid rgba(255,92,122,0.35);
+  border-radius: 6px;
+  padding: 2px 7px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* ── TAB BAR ── */
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text2);
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.2px;
+}
+
+.tab-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--surface2);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(122,92,255,0.4);
+}
+
+/* ── TAB SECTIONS ── */
+.tab-section {
+  display: none;
+  animation: fadeSlideIn 0.3s ease;
+}
+.tab-section.active { display: block; }
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+/* ── INNER CARD ── */
+.inner-card {
+  padding: 18px 20px;
+  background: var(--bg3);
+}
+
+.inner-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.card-desc {
+  font-size: 0.83rem;
+  color: var(--text2);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* ── PROGRESS ── */
+.progress-bar {
+  background: var(--surface2);
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width 0.8s ease;
+}
+
+.progress-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text3);
+}
+
+/* ── BADGE VARIANTS ── */
+.badge-yellow {
+  background: rgba(255,200,80,0.12);
+  color: #ffc850;
+  border-color: rgba(255,200,80,0.3);
+}
+
+.badge-teal {
+  background: rgba(79,209,197,0.12);
+  color: var(--accent3);
+  border-color: rgba(79,209,197,0.3);
+}
+
+/* ── NOTES ── */
+.notes-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.notes-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text3);
+  margin-top: 10px;
+}
+
+/* ── RESTRICTED PLACEHOLDER ── */
+.restricted-placeholder {
+  margin-top: 24px;
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--bg3);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text3);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.lock-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+/* ── PLACEHOLDER TEXT ── */
+.placeholder-text {
+  color: var(--text3);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .tab-bar { gap: 6px; }
+  .tab-btn { font-size: 0.8rem; padding: 7px 13px; }
+  .notes-actions { flex-direction: column; }
+  .notes-actions .btn { width: 100%; justify-content: center; }
+}

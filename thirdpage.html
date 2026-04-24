@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Logs</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="thirdpage.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="mainpage.html" class="nav-logo">◈ MySpace</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="mainpage.html">Home</a></li>
+      <li><a href="secondarypage.html">About</a></li>
+      <li><a href="thirdpage.html" class="active">Logs</a></li>
+      <li><a href="fourthpage.html">Socials</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-wrap content-layer">
+    <!-- HERO -->
+    <div class="hero">
+      <p class="hero-label">// changelog</p>
+      <h1>Update Logs</h1>
+      <p>A running record of everything that's been added, changed, or fixed. Last updated regularly.</p>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="section-container">
+      <div class="timeline">
+
+        <!-- Entry -->
+        <div class="timeline-entry">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="badge">v1.3.0</span>
+              <span class="timeline-date">2025-07-14</span>
+            </div>
+            <h3 class="timeline-title">Private Page & Notes System</h3>
+            <ul class="timeline-list">
+              <li>Added private main page with code gate</li>
+              <li>Notes area with JSON export / import</li>
+              <li>10 custom slots on both public and private pages</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry -->
+        <div class="timeline-entry">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="badge">v1.2.0</span>
+              <span class="timeline-date">2025-06-28</span>
+            </div>
+            <h3 class="timeline-title">Socials & Secondary Page</h3>
+            <ul class="timeline-list">
+              <li>New socials page with platform cards</li>
+              <li>Secondary page rework with feature cards</li>
+              <li>Shared CSS design system extracted</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry -->
+        <div class="timeline-entry">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="badge">v1.1.0</span>
+              <span class="timeline-date">2025-06-10</span>
+            </div>
+            <h3 class="timeline-title">Tab System Overhaul</h3>
+            <ul class="timeline-list">
+              <li>Dynamic tab switching without page reload</li>
+              <li>Added Friends, Games, and About Me sections</li>
+              <li>Smooth fade transitions between tabs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry -->
+        <div class="timeline-entry">
+          <div class="timeline-dot timeline-dot--minor"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="badge badge--minor">v1.0.2</span>
+              <span class="timeline-date">2025-05-30</span>
+            </div>
+            <h3 class="timeline-title">Bug Fixes</h3>
+            <ul class="timeline-list">
+              <li>Fixed mobile nav hamburger not closing on link click</li>
+              <li>Corrected scrollbar styling in Firefox</li>
+              <li>Hero gradient text fix on Safari</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry -->
+        <div class="timeline-entry">
+          <div class="timeline-dot timeline-dot--minor"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="badge badge--minor">v1.0.1</span>
+              <span class="timeline-date">2025-05-22</span>
+            </div>
+            <h3 class="timeline-title">Performance & Polish</h3>
+            <ul class="timeline-list">
+              <li>Reduced CSS bundle size by 18%</li>
+              <li>Added glow hover effects to cards</li>
+              <li>Improved responsive breakpoints</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry -->
+        <div class="timeline-entry">
+          <div class="timeline-dot timeline-dot--origin"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="badge badge--origin">v1.0.0</span>
+              <span class="timeline-date">2025-05-15</span>
+            </div>
+            <h3 class="timeline-title">Initial Release 🚀</h3>
+            <ul class="timeline-list">
+              <li>Site launched with main page</li>
+              <li>Dark purple theme established</li>
+              <li>Basic navbar and page structure</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </div>
+
+  <footer class="footer content-layer">
+    <p>◈ MySpace — built with care &amp; purple pixels</p>
+  </footer>
+
+  <script src="thirdpage.js"></script>
+</body>
+</html>

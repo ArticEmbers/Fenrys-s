@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private — Main Page</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="privatemainpage.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <!-- NAVBAR (no direct link here from public nav) -->
+  <nav class="navbar">
+    <a href="mainpage.html" class="nav-logo">◈ MySpace <span class="private-tag">PRIVATE</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="mainpage.html">Home</a></li>
+      <li><a href="secondarypage.html">About</a></li>
+      <li><a href="thirdpage.html">Logs</a></li>
+      <li><a href="fourthpage.html">Socials</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-wrap content-layer">
+    <!-- HERO -->
+    <div class="hero">
+      <p class="hero-label">// restricted area</p>
+      <h1>Private Dashboard</h1>
+      <p>This area is private. Notes, personal content, and restricted sections live here.</p>
+    </div>
+
+    <div class="section-container">
+
+      <!-- TAB BAR -->
+      <div class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-tab="wip">Work in Progress</button>
+        <button class="tab-btn" data-tab="notes">Personal Notes</button>
+        <button class="tab-btn" data-tab="restricted">Restricted</button>
+        <button class="tab-btn" data-tab="custom1">Custom 1</button>
+        <button class="tab-btn" data-tab="custom2">Custom 2</button>
+        <button class="tab-btn" data-tab="custom3">Custom 3</button>
+        <button class="tab-btn" data-tab="custom4">Custom 4</button>
+        <button class="tab-btn" data-tab="custom5">Custom 5</button>
+        <button class="tab-btn" data-tab="custom6">Custom 6</button>
+        <button class="tab-btn" data-tab="custom7">Custom 7</button>
+        <button class="tab-btn" data-tab="custom8">Custom 8</button>
+        <button class="tab-btn" data-tab="custom9">Custom 9</button>
+        <button class="tab-btn" data-tab="custom10">Custom 10</button>
+      </div>
+
+      <!-- SECTIONS -->
+
+      <!-- Work in Progress -->
+      <div class="tab-section active" id="tab-wip">
+        <div class="card">
+          <div class="section-label">🔧 Work in Progress</div>
+          <p>Projects currently under development. Status and notes tracked here.</p>
+          <div class="grid-2" style="margin-top:20px;">
+            <div class="card inner-card">
+              <div class="badge" style="margin-bottom:8px;">in progress</div>
+              <h4>Project Alpha</h4>
+              <p class="card-desc">Placeholder — describe your active project here.</p>
+              <div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div>
+              <span class="progress-label">45% complete</span>
+            </div>
+            <div class="card inner-card">
+              <div class="badge badge-yellow" style="margin-bottom:8px;">planning</div>
+              <h4>Project Beta</h4>
+              <p class="card-desc">Placeholder — another project in early planning.</p>
+              <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+              <span class="progress-label">10% complete</span>
+            </div>
+            <div class="card inner-card">
+              <div class="badge badge-teal" style="margin-bottom:8px;">review</div>
+              <h4>Project Gamma</h4>
+              <p class="card-desc">Placeholder — under review before release.</p>
+              <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+              <span class="progress-label">80% complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Notes -->
+      <div class="tab-section" id="tab-notes">
+        <div class="card">
+          <div class="section-label">📝 Personal Notes</div>
+          <p style="margin-bottom:16px;">Write your private notes below. Export or import as JSON anytime.</p>
+
+          <textarea
+            class="input-field"
+            id="notesArea"
+            placeholder="Start typing your notes here…"
+            style="min-height:260px;"
+          ></textarea>
+
+          <div class="notes-actions">
+            <button class="btn btn-primary" id="exportBtn">⬇ Export Notes</button>
+            <button class="btn btn-secondary" id="importBtn">⬆ Import Notes</button>
+            <input type="file" id="importFile" accept=".json" style="display:none;" />
+            <button class="btn btn-ghost" id="clearBtn">✕ Clear</button>
+          </div>
+
+          <div id="notesAlert" class="alert"></div>
+
+          <div class="notes-meta" id="notesMeta">0 characters · 0 words</div>
+        </div>
+      </div>
+
+      <!-- Restricted -->
+      <div class="tab-section" id="tab-restricted">
+        <div class="card">
+          <div class="section-label">🔒 Restricted Content</div>
+          <p>Placeholder for restricted or sensitive content. Only visible to authorised users.</p>
+          <div class="restricted-placeholder">
+            <div class="lock-icon">🔐</div>
+            <p>No restricted content has been added yet.<br/>Edit this section to add private information.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom 1–10 (empty placeholders) -->
+      <div class="tab-section" id="tab-custom1"><div class="card"><div class="section-label">Custom 1</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom2"><div class="card"><div class="section-label">Custom 2</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom3"><div class="card"><div class="section-label">Custom 3</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom4"><div class="card"><div class="section-label">Custom 4</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom5"><div class="card"><div class="section-label">Custom 5</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom6"><div class="card"><div class="section-label">Custom 6</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom7"><div class="card"><div class="section-label">Custom 7</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom8"><div class="card"><div class="section-label">Custom 8</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom9"><div class="card"><div class="section-label">Custom 9</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+      <div class="tab-section" id="tab-custom10"><div class="card"><div class="section-label">Custom 10</div><p class="placeholder-text">This section is empty. Add your own content here.</p></div></div>
+
+    </div><!-- /section-container -->
+  </div>
+
+  <footer class="footer content-layer">
+    <p>◈ MySpace — Private Area &nbsp;|&nbsp; <a href="mainpage.html" style="color:var(--accent2);text-decoration:none;">← Back to Public</a></p>
+  </footer>
+
+  <script src="privatemainpage.js"></script>
+</body>
+</html>

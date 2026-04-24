@@ -1,0 +1,134 @@
+/* thirdpage.css — Update Logs */
+
+/* ── TIMELINE WRAPPER ── */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+/* ── ENTRY ── */
+.timeline-entry {
+  position: relative;
+  margin-bottom: 36px;
+  opacity: 0;
+  transform: translateX(-16px);
+  animation: slideEntry 0.5s ease forwards;
+}
+
+.timeline-entry:nth-child(1) { animation-delay: 0.05s; }
+.timeline-entry:nth-child(2) { animation-delay: 0.15s; }
+.timeline-entry:nth-child(3) { animation-delay: 0.25s; }
+.timeline-entry:nth-child(4) { animation-delay: 0.35s; }
+.timeline-entry:nth-child(5) { animation-delay: 0.45s; }
+.timeline-entry:nth-child(6) { animation-delay: 0.55s; }
+
+@keyframes slideEntry {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── DOT ── */
+.timeline-dot {
+  position: absolute;
+  left: -34px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 10px rgba(122,92,255,0.7);
+}
+
+.timeline-dot--minor {
+  background: var(--surface2);
+  border-color: var(--border);
+  box-shadow: none;
+  width: 10px;
+  height: 10px;
+  left: -32px;
+  top: 20px;
+}
+
+.timeline-dot--origin {
+  background: var(--accent3);
+  box-shadow: 0 0 12px rgba(79,209,197,0.6);
+}
+
+/* ── CONTENT ── */
+.timeline-content {
+  padding: 22px 26px;
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text3);
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline-list li {
+  font-size: 0.88rem;
+  color: var(--text2);
+  padding-left: 18px;
+  position: relative;
+}
+
+.timeline-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ── BADGE VARIANTS ── */
+.badge--minor {
+  background: rgba(96,96,160,0.15);
+  color: var(--text3);
+  border-color: rgba(96,96,160,0.3);
+}
+
+.badge--origin {
+  background: rgba(79,209,197,0.12);
+  color: var(--accent3);
+  border-color: rgba(79,209,197,0.3);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .timeline { padding-left: 28px; }
+  .timeline::before { left: 7px; }
+  .timeline-dot { left: -26px; }
+  .timeline-dot--minor { left: -24px; }
+}

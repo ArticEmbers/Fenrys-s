@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hub — Secondary Page</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="secondarypage.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <nav class="navbar">
+    <a href="mainpage.html" class="nav-logo">◈ NEXUS</a>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="mainpage.html">Home</a></li>
+      <li><a href="secondarypage.html" class="active">Hub</a></li>
+      <li><a href="thirdpage.html">Updates</a></li>
+      <li><a href="fourthpage.html">Socials</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap content-layer">
+    <div class="hero">
+      <div class="hero-label">// hub · important content</div>
+      <h1>The Hub</h1>
+      <p>Centralized space for important information, collections, and featured content. Built for quick reference and discovery.</p>
+    </div>
+
+    <div class="section-container">
+
+      <!-- FEATURED BANNER -->
+      <div class="featured-banner">
+        <div class="featured-text">
+          <span class="badge">Featured</span>
+          <h2>Featured Content Title</h2>
+          <p>This is a featured highlight section. Replace with whatever important content you'd like to showcase at the top of the page.</p>
+          <button class="btn btn-primary">View Details</button>
+        </div>
+        <div class="featured-art">⬡</div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SECTION FILTERS -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" onclick="filterCards(this,'all')">All</button>
+        <button class="filter-btn" data-filter="info" onclick="filterCards(this,'info')">Info</button>
+        <button class="filter-btn" data-filter="media" onclick="filterCards(this,'media')">Media</button>
+        <button class="filter-btn" data-filter="tools" onclick="filterCards(this,'tools')">Tools</button>
+        <button class="filter-btn" data-filter="links" onclick="filterCards(this,'links')">Links</button>
+      </div>
+
+      <!-- CARDS GRID -->
+      <div class="cards-grid" id="cardsGrid">
+
+        <div class="card hub-card" data-category="info">
+          <div class="hub-card-icon">📌</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Info</div>
+            <h3>Important Note</h3>
+            <p>Placeholder information card. Use this for pinned announcements or key facts you want to keep visible.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Read</button>
+        </div>
+
+        <div class="card hub-card" data-category="media">
+          <div class="hub-card-icon">🎵</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Media</div>
+            <h3>Current Playlist</h3>
+            <p>Placeholder for your current favorite music, shows, or media you're enjoying right now.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Open</button>
+        </div>
+
+        <div class="card hub-card" data-category="tools">
+          <div class="hub-card-icon">🛠️</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Tools</div>
+            <h3>Useful Tool</h3>
+            <p>Link to a tool or resource you frequently use. Add description and a direct access button.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Launch</button>
+        </div>
+
+        <div class="card hub-card" data-category="links">
+          <div class="hub-card-icon">🔗</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Links</div>
+            <h3>Quick Link</h3>
+            <p>Bookmark important URLs here for fast access without leaving your hub.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Visit</button>
+        </div>
+
+        <div class="card hub-card" data-category="info">
+          <div class="hub-card-icon">📊</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Info</div>
+            <h3>Stats Overview</h3>
+            <p>Display key stats, metrics, or progress indicators for personal goals or projects.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">View</button>
+        </div>
+
+        <div class="card hub-card" data-category="media">
+          <div class="hub-card-icon">🖼️</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Media</div>
+            <h3>Gallery</h3>
+            <p>Placeholder for a photo gallery, artwork collection, or screenshots you want to showcase.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Browse</button>
+        </div>
+
+        <div class="card hub-card" data-category="tools">
+          <div class="hub-card-icon">⚙️</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Tools</div>
+            <h3>Settings Reference</h3>
+            <p>Keep frequently needed configuration details or setup instructions handy in one place.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Open</button>
+        </div>
+
+        <div class="card hub-card" data-category="links">
+          <div class="hub-card-icon">🌐</div>
+          <div class="hub-card-body">
+            <div class="hub-card-tag">Links</div>
+            <h3>Community</h3>
+            <p>Link to your favorite community forums, Discord servers, or online spaces.</p>
+          </div>
+          <button class="btn btn-ghost hub-btn">Join</button>
+        </div>
+
+      </div>
+
+      <!-- STATS ROW -->
+      <hr class="divider" />
+      <div class="stats-row">
+        <div class="card stat-big">
+          <div class="stat-big-num">128</div>
+          <div class="stat-big-label">Content Items</div>
+        </div>
+        <div class="card stat-big">
+          <div class="stat-big-num">42</div>
+          <div class="stat-big-label">Active Links</div>
+        </div>
+        <div class="card stat-big">
+          <div class="stat-big-num">7</div>
+          <div class="stat-big-label">Categories</div>
+        </div>
+        <div class="card stat-big">
+          <div class="stat-big-num">∞</div>
+          <div class="stat-big-label">Possibilities</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">NEXUS © 2025 — Hub</div>
+  </div>
+
+  <script src="secondarypage.js"></script>
+</body>
+</html>

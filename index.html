@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="mainpage.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="mainpage.html" class="nav-logo">◈ NEXUS</a>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="mainpage.html" class="active">Home</a></li>
+      <li><a href="secondarypage.html">Hub</a></li>
+      <li><a href="thirdpage.html">Updates</a></li>
+      <li><a href="fourthpage.html">Socials</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap content-layer">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-label">// public area</div>
+      <h1>Welcome to<br/>my Space</h1>
+      <p>A personal hub for friends, games, and everything in between. Navigate through sections below or enter your access code for the private area.</p>
+    </div>
+
+    <div class="section-container">
+
+      <!-- TAB BAR -->
+      <div class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-tab="friends">Friends</button>
+        <button class="tab-btn" data-tab="games">Games</button>
+        <button class="tab-btn" data-tab="about">About Me</button>
+        <button class="tab-btn" data-tab="custom1">Custom 1</button>
+        <button class="tab-btn" data-tab="custom2">Custom 2</button>
+        <button class="tab-btn" data-tab="custom3">Custom 3</button>
+        <button class="tab-btn" data-tab="custom4">Custom 4</button>
+        <button class="tab-btn" data-tab="custom5">Custom 5</button>
+        <button class="tab-btn" data-tab="custom6">Custom 6</button>
+        <button class="tab-btn" data-tab="custom7">Custom 7</button>
+        <button class="tab-btn" data-tab="custom8">Custom 8</button>
+        <button class="tab-btn" data-tab="custom9">Custom 9</button>
+        <button class="tab-btn" data-tab="custom10">Custom 10</button>
+      </div>
+
+      <!-- SECTIONS -->
+
+      <div class="tab-section active" id="tab-friends">
+        <div class="section-header">
+          <h2>Friends</h2>
+          <span class="badge">3 online</span>
+        </div>
+        <div class="grid-3">
+          <div class="card friend-card">
+            <div class="friend-avatar">A</div>
+            <div class="friend-info">
+              <div class="friend-name">Alex</div>
+              <div class="friend-status online">● Online</div>
+            </div>
+          </div>
+          <div class="card friend-card">
+            <div class="friend-avatar">S</div>
+            <div class="friend-info">
+              <div class="friend-name">Sam</div>
+              <div class="friend-status online">● Online</div>
+            </div>
+          </div>
+          <div class="card friend-card">
+            <div class="friend-avatar">J</div>
+            <div class="friend-info">
+              <div class="friend-name">Jordan</div>
+              <div class="friend-status online">● Online</div>
+            </div>
+          </div>
+          <div class="card friend-card">
+            <div class="friend-avatar">M</div>
+            <div class="friend-info">
+              <div class="friend-name">Morgan</div>
+              <div class="friend-status offline">○ Offline</div>
+            </div>
+          </div>
+          <div class="card friend-card">
+            <div class="friend-avatar">R</div>
+            <div class="friend-info">
+              <div class="friend-name">Riley</div>
+              <div class="friend-status offline">○ Offline</div>
+            </div>
+          </div>
+          <div class="card friend-card placeholder-card">
+            <div class="friend-avatar">+</div>
+            <div class="friend-info">
+              <div class="friend-name">Add Friend</div>
+              <div class="friend-status">Placeholder slot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-section" id="tab-games">
+        <div class="section-header">
+          <h2>Games</h2>
+          <span class="badge">Library</span>
+        </div>
+        <div class="grid-2">
+          <div class="card game-card">
+            <div class="game-icon">🎮</div>
+            <div class="game-info">
+              <div class="game-title">Placeholder Game 1</div>
+              <div class="game-genre">Action / RPG</div>
+              <div class="game-hours">124 hours played</div>
+            </div>
+          </div>
+          <div class="card game-card">
+            <div class="game-icon">🕹️</div>
+            <div class="game-info">
+              <div class="game-title">Placeholder Game 2</div>
+              <div class="game-genre">Strategy</div>
+              <div class="game-hours">87 hours played</div>
+            </div>
+          </div>
+          <div class="card game-card">
+            <div class="game-icon">🏆</div>
+            <div class="game-info">
+              <div class="game-title">Placeholder Game 3</div>
+              <div class="game-genre">Competitive</div>
+              <div class="game-hours">312 hours played</div>
+            </div>
+          </div>
+          <div class="card game-card">
+            <div class="game-icon">🌌</div>
+            <div class="game-info">
+              <div class="game-title">Placeholder Game 4</div>
+              <div class="game-genre">Adventure</div>
+              <div class="game-hours">56 hours played</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-section" id="tab-about">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <span class="badge">Bio</span>
+        </div>
+        <div class="about-layout">
+          <div class="card about-main">
+            <div class="about-avatar">◈</div>
+            <h3>Hello, I'm [Name]</h3>
+            <p>This is a placeholder bio section. Add your personal description, interests, and whatever you'd like the world to know about you. Keep it genuine, keep it you.</p>
+            <div class="about-tags">
+              <span class="tag">Gaming</span>
+              <span class="tag">Music</span>
+              <span class="tag">Design</span>
+              <span class="tag">Code</span>
+            </div>
+          </div>
+          <div class="about-side">
+            <div class="card stat-card">
+              <div class="stat-label">Location</div>
+              <div class="stat-value">🌍 Earth</div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-label">Status</div>
+              <div class="stat-value">🟣 Active</div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-label">Vibe</div>
+              <div class="stat-value">✨ Chill</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 CUSTOM SECTIONS -->
+      <div class="tab-section" id="tab-custom1">
+        <div class="section-header"><h2>Custom 1</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom2">
+        <div class="section-header"><h2>Custom 2</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom3">
+        <div class="section-header"><h2>Custom 3</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom4">
+        <div class="section-header"><h2>Custom 4</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom5">
+        <div class="section-header"><h2>Custom 5</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom6">
+        <div class="section-header"><h2>Custom 6</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom7">
+        <div class="section-header"><h2>Custom 7</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom8">
+        <div class="section-header"><h2>Custom 8</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom9">
+        <div class="section-header"><h2>Custom 9</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+      <div class="tab-section" id="tab-custom10">
+        <div class="section-header"><h2>Custom 10</h2><span class="badge">Empty</span></div>
+        <div class="empty-section"><div class="empty-icon">📋</div><p>This section is empty. Add your content here.</p></div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- ACCESS CODE PANEL -->
+      <div class="access-panel">
+        <div class="access-icon">🔐</div>
+        <h3>Private Area Access</h3>
+        <p>Enter your access code to unlock the private section.</p>
+        <div class="access-form">
+          <input class="input-field access-input" type="password" id="accessCode" placeholder="Enter code..." maxlength="16" autocomplete="off" />
+          <button class="btn btn-primary" onclick="validateCode()">Submit</button>
+        </div>
+        <div class="alert alert-error" id="alertError">Invalid code. Try again.</div>
+        <div class="alert alert-success" id="alertSuccess">
+          Access granted. 
+          <a href="privatemainpage.html" class="access-link">Open Private Main Page →</a>
+        </div>
+      </div>
+
+    </div><!-- /section-container -->
+
+    <div class="footer">NEXUS © 2025 — Personal Hub</div>
+  </div>
+
+  <script src="mainpage.js"></script>
+</body>
+</html>
